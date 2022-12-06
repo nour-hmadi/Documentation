@@ -1,0 +1,273 @@
+body{
+    margin:auto;
+    width:80%;
+}
+
+#contact{
+padding: 5px;
+}
+.contact{
+    margin: -15px;
+    width: 400px;
+    background-color: red;
+    color: white;
+}
+
+.contact-type{
+padding: 2px;
+}
+#contact h3{display: none;}
+
+#contact{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 100px;
+    margin-top: 40px;
+    margin-right: 440px;
+    
+}
+.contact-value{
+    width: 50%;
+    height: 17px;
+    margin-left: 130px;
+    margin-top: -23px;
+    padding: 12px;
+    background-color: black;
+}
+
+.skills-primary, .skills-secondary {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 130px;
+}
+.contact-skype > contact-value{
+    color:black;
+
+}
+.skills-primary{
+    margin-top: 35px;
+}
+
+.skills-secondary {
+    margin-top: 20px;
+}
+.skills-primary::after{
+    display: block;
+    content: 'Main';
+    position: absolute;
+    margin-top: -20px;
+}
+
+.skills-secondary::after{
+    display: block;
+    content: 'Other';
+    position: absolute;
+    margin-top: -20px;
+}
+.skill {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+}
+
+
+
+
+.skill span {
+    align-items: center;
+    margin-left: 10px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    z-index: 1;
+    width: 90%;
+    height: 28px;
+    margin-left: 10px;
+    display: flex;
+}
+
+.skill span::after{
+    position: absolute;
+    content: '';
+    height: 30px;
+    background-color: red;
+    z-index: -1;
+    margin-left: -7px;
+}
+
+  [data-skill="1"] span::after {
+    width: 8%;
+  }
+  [data-skill="3"] span::after {
+      width: 32%;
+  }
+  
+  .skills-secondary > [data-skill="5"]  span::after {
+    width: 50%;
+    opacity: 0.5; 
+}
+
+  
+
+.skills-primary > [data-skill="5"]  span::after {
+    width: 50%;
+}
+
+
+
+
+  [data-skill="7"] span::after {
+  width: 73%;
+  opacity: 0.5
+  ;}
+
+
+
+  [data-skill="9"] span::after {
+      width: 93%;
+      opacity: 0.5;
+  }
+
+
+ 
+
+.content{
+    display:grid;
+    grid-template-columns:50% 50%;
+    padding-left: 20px;
+}
+
+header{
+    background-color: grey;
+    color: red;
+}
+
+figure {
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+
+.contact-value{
+    width:70%;
+    background-color:black;
+}
+
+
+
+header div{
+    display: flex;
+    flex-direction: row;
+}
+
+header div hgroup{
+margin: 40px;
+margin-left: 90px; 
+}
+
+section>h3{
+    border-bottom: 1px solid rgb(176, 174, 174);
+    padding-bottom: 10px;
+}
+
+h3::before{
+    content:'';
+    height: 25px;
+    width:25px;
+    background-color:red;
+    border-radius: 50%;
+    display:inline-block;
+    white-space:pre;
+    margin-right:5px;
+}
+
+.experience-date-separator{color:red;}
+
+h4{color: red;}   
+
+a{color:red;}
+
+p{width:80%;}
+
+.experience-details{
+    color: lightgray;
+    margin-left: 8px;}
+
+.experience-institution::before{
+    content:'@';
+    display:inline-block;
+    margin:3px;
+}
+.experience-details::before{
+    content:'In';
+    display:inline-block;
+    margin:3px;
+}
+
+
+@media only screen and (max-width:800px){
+    .experience-details::before{
+        content:'In';
+        display:inline-block;
+        margin:3px;
+    }
+    .experience-institution::before{
+        content:'@';
+        display:inline-block;
+        margin:3px;
+    }
+    .experience-details{
+        color: lightgray;
+        margin-left: 8px;}
+    body{
+            margin:auto;
+            width:80%;
+        }
+    .content{
+          display: flex;
+          flex-direction: column;
+ 
+            padding-left: 20px;
+        }
+    #contact{
+          
+            position: relative;
+            padding-right: 100px;
+            margin-top: 15px;
+            margin-right: 440px;
+            padding: 0px;}
+    .contact-value{
+                width: 80%;
+                height: 21px;
+                margin-left: 130px;
+                margin-top: -23px;
+                padding: 8px;
+              background-color:white;
+     }
+     header{
+        background-color: grey;
+        color: red;
+        font-size: smaller;
+        width: 130%;
+        
+    }
+            
+    figure {
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+    p{width:100%;}
+
+    body{
+        margin:auto;
+        width:100%;
+    }
+    #contact h3{display:inline-block;
+        width: 100%;
+    }
+    }
+  
