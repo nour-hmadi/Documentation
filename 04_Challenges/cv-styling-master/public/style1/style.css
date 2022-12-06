@@ -3,9 +3,7 @@ body{
     width:80%;
 }
 
-#contact{
-padding: 5px;
-}
+
 .contact{
     margin: -15px;
     width: 400px;
@@ -25,6 +23,7 @@ padding: 2px;
     padding-right: 100px;
     margin-top: 40px;
     margin-right: 440px;
+    padding: 5px;
     
 }
 .contact-value{
@@ -264,7 +263,7 @@ p{width:80%;}
 
     body{
         margin:auto;
-        width:100%;
+        width:80%;
     }
     #contact h3{display:inline-block;
         width: 100%;
