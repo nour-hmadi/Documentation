@@ -1,3 +1,3 @@
-var codiCommand='name';
-alert(codiCommand);
+var name ;
+alert(name);
 
