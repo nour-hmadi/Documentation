@@ -1,4 +1,4 @@
-
-
-// var name='samir';
+var name;
 alert(name);
+
+
