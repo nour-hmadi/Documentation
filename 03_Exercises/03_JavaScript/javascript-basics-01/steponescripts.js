@@ -1,3 +1,3 @@
-var gname='codiTech';
-alert(name);
+var codiCommand='name';
+alert(codiCommand);
 
