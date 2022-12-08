@@ -1,4 +1,4 @@
-var name;
-alert(name);
+var name1;
+alert(name1);
 
 
