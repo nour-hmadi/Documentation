@@ -1,8 +1,8 @@
-var x;
-x=prompt("Enter a variable x ");
 
+function myfunction(){
+    var x=document.getElementById("first_number").value;
+    var y=document.getElementById("second_number").value;
+    var z= Number(x)*Number(y);
 
-var y;
-y=prompt("Enter a variable y ");
-var z=x*y;
-alert(z);
+    alert(z);
+    }

@@ -1,8 +1,11 @@
-var x;
-x=prompt("Enter a variable x ");
 
 
-var y;
-y=prompt("Enter a variable y ");
-var z=x%y;
-alert(z);
+
+
+function myfunction(){
+    var x=document.getElementById("first_number").value;
+    var y=document.getElementById("second_number").value;
+    var z= Number(x)%Number(y);
+
+    alert(z);
+    }

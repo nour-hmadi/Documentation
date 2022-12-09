@@ -13,4 +13,4 @@
 var myName=document.getElementById("myName");
 
 
-    alert("Hello " + myName);
+    alert("Hello " + myName);*/

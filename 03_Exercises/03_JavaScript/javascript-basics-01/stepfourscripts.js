@@ -1,21 +1,11 @@
 
-var myName
-myName=document.getElementById("name");
-myName = prompt("Enter your name ");
-
-
-
-var mysurname;
-mysurname=document.getElementById("surname");
-mysurname = prompt("Enter your surname ");
 
 
 
 
-var mycity
-mycity=document.getElementById("city");
-mycity = prompt("Enter your city ");
-
-
-
-alert('name: '+myName+ '\n'+'surname: '+mysurname+'\n'+'City: '+mycity);
+function myfunction(){
+    var x=document.getElementById("name").value;
+    var y=document.getElementById("surname").value;
+    var z=document.getElementById("city").value;
+    alert('name: '+x+ '\n'+'surname: '+y+'\n'+'City: '+z);
+    }
