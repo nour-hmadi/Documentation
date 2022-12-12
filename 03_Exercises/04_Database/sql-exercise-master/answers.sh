@@ -1,0 +1,18 @@
+//select * from students to get all data 
+
+1. select name from students
+
+2. select * from students where age> 30
+
+3. select name from students where Gender = "F" and  Age = 30
+
+4. select points from students where name = "Alex"
+
+5. insert into students (id, name, Age, Gender, Points) 
+   VALUES (7, "Nour", 23, "F", 520);
+
+6. UPDATE students SET Points = "450" WHERE name = "Basma"
+
+7.UPDATE students SET Points = "150" WHERE name = "Alex"
+
+8.
