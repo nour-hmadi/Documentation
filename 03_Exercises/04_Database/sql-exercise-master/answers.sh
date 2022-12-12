@@ -39,11 +39,24 @@ II.  CREATE TABLE graduates (
 
 
 III.
+
+
 14. SELECT employees.Name, employees.Company, companies.Date FROM employees JOIN companies ON employees.Company = companies.name;
 
 15. SELECT employees.Name FROM employees JOIN companies ON employees.Company = companies.name WHERE companies.Date < 2000;
 
 16. SELECT companies.Name FROM companies JOIN employees ON companies.name = employees.Company WHERE employees.Role = "Graphic Designer";
 
+IV. 
+
+18. SELECT *, max(Points) FROM students;
+
+19. SELECT avg(Points) FROM students;
+
+20. SELECT count(Points) FROM students WHERE students.Points = "500";
+
+21. SELECT name FROM students WHERE students.name LIKE "%s%";
+
+22. SELECT * FROM students ORDER BY students.Points DESC;
 
 
