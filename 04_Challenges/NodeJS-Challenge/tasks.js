@@ -85,7 +85,7 @@ function quit(){
   process.exit();
 }
    
-
+// This function lists for the user all the commands available 
 function givehelp(){
   console.log('possible commands are : hello quit exit help')
   
