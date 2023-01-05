@@ -48,6 +48,7 @@ function onDataReceived(text) {
   }
 }
 
+//using the same function quit to exit
 
 /**
  * prints "unknown command"
