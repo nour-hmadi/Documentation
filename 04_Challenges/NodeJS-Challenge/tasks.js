@@ -98,7 +98,7 @@ function quit(){
    
 // This function lists for the user all the commands available 
 function givehelp(){
-  console.log('possible commands are : hello quit exit help')
+  console.log('possible commands are :\n"hello" or any command line that starts with "hello " for greetings \n"quit" or "exit" for quitting the app \nAnd "help" to help you get the list of available commands')
 
 }
 // The following line starts the application
