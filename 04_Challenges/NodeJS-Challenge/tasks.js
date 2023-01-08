@@ -56,7 +56,12 @@ function onDataReceived(text) {
   else if (text==='\n'){
     console.log('\n');
   }
-  
+  else if (text==='add\n'){
+    console.log("ERROR! Specify a task to add");
+  }
+  else if (text.substring(0, 4) === "add "){
+    add(text.replace("add ", "").substring(0,4));
+  }
   else{
     unknownCommand(text);
   }
@@ -71,7 +76,15 @@ function list(){
 }
 
 
+ 
+ 
 
+function add(text){
+  text=text.replace("\n","")
+  text=text.trim(" ")
+  Tasks.push(text);
+  list();
+}
 
 
 
