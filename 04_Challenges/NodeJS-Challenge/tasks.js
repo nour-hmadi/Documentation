@@ -141,7 +141,8 @@ function quit(){
    
 // This function lists for the user all the commands available 
 function givehelp(){
-  console.log('possible commands are :\n"hello" or any command line that starts with "hello " for greetings \n"quit" or "exit" for quitting the app \nAnd "help" to help you get the list of available commands')
+  console.log('possible commands are :\n"hello" or any command line that starts with "hello " for greetings \n"quit" or "exit" for quitting the app \n"help" to help you get the list of available commands')
+  console.log('"list" to see the tasks list \n"add" to add more tasks \n"remove" to delete the last task \n"remove n" to remove the nth task for example remove 3, removes the 3rd task ')
 
 }
 // The following line starts the application
