@@ -63,6 +63,7 @@ function onDataReceived(text) {
 
 function hello(text){
   text=text.replace("\n","")
+  text=text.trim(" ")
   console.log(text+"!")
 }
 //const first = str.split(' ').at(0);
