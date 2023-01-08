@@ -62,10 +62,15 @@ function onDataReceived(text) {
   else if (text.substring(0, 4) === "add "){
     add(text.replace("add ", "").substring(0,4));
   }
+  else if (text==='remove\n'){
+   removelast();
+  }
+  else if (text.substring(0, 7)==='remove '){
+    removenumber(text);
+   }
   else{
     unknownCommand(text);
   }
-  
 }
 
 let Tasks=["Eat your breakfast", "Eat your lunch", "Eat your dinner", "Sleep well", "Do exercises"]
@@ -74,11 +79,6 @@ function list(){
   console.log("Task" + (i+1) + ': ' + Tasks[i]);
 
 }
-
-
- 
- 
-
 function add(text){
   text=text.replace("\n","")
   text=text.trim(" ")
@@ -86,8 +86,16 @@ function add(text){
   list();
 }
 
+function removelast(){
+  Tasks.pop();
+  list();
+}
 
-
+function removenumber(text){
+  Tasks.splice(item.substring(8)-1,1); 
+ console.log("This task was removed");
+ list();
+}
 
 
 /**
