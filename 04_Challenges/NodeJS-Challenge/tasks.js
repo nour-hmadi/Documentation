@@ -50,10 +50,32 @@ function onDataReceived(text) {
   else if(text === 'help\n') {
     givehelp();
   }
+  else if (text==='list\n'){
+    list();
+  }
+  else if (text==='\n'){
+    console.log('\n');
+  }
+  
   else{
     unknownCommand(text);
   }
+  
 }
+
+let Tasks=["Eat your breakfast", "Eat your lunch", "Eat your dinner", "Sleep well", "Do exercises"]
+function list(){
+  for(let i=0; i<Tasks.length; i++)
+  console.log("Task" + (i+1) + ': ' + Tasks[i]);
+
+}
+
+
+
+
+
+
+
 
 /**
  * Says hello
