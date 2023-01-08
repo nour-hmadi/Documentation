@@ -33,12 +33,16 @@ function startApp(name){
  * @param  {string} text data typed by the user
  * @returns {void}
  */
+
 function onDataReceived(text) {
   if (text === 'quit\n') {
     quit();
   }
-  else if(text === 'hello\n'){
-    hello();
+  else if( text === 'hello\n'){
+    hello(text);
+  }
+  else if (text.substring(0, 6) === "hello ") {
+    hello(text.replace("\n", "").substring());
   }
   else if (text === 'exit\n') {
     quit();
@@ -50,6 +54,19 @@ function onDataReceived(text) {
     unknownCommand(text);
   }
 }
+
+/**
+ * Says hello
+ *
+ * @returns {void}
+ */
+
+function hello(text){
+  text=text.replace("\n","")
+  console.log(text+"!")
+}
+//const first = str.split(' ').at(0);
+//console.log(); // 👉️ Hello
 
 //using the same function quit to exit
 
@@ -65,14 +82,7 @@ function unknownCommand(c){
 }
 
 
-/**
- * Says hello
- *
- * @returns {void}
- */
-function hello(){
-  console.log('hello!')
-}
+
 
 
 /**
@@ -88,7 +98,7 @@ function quit(){
 // This function lists for the user all the commands available 
 function givehelp(){
   console.log('possible commands are : hello quit exit help')
-  
+
 }
 // The following line starts the application
 startApp("Nour")
