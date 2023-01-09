@@ -35,6 +35,7 @@ function startApp(name){
  */
 
 function onDataReceived(text) {
+ 
   if (text === 'quit\n') {
     quit();
   }
@@ -59,8 +60,12 @@ function onDataReceived(text) {
   else if (text==='add\n'){
     console.log("ERROR! Specify a task to add");
   }
+  else if (text.trim(" ")==='add'){
+    console.log("ERROR! Specify a task to add");
+  }
   else if (text.substring(0, 4) === "add "){
-    add(text.replace("add ", "").substring(0,4));
+    add(text.replace("add ", "").substring());
+
   }
   else if (text==='remove\n'){
    removelast();
@@ -76,7 +81,9 @@ function onDataReceived(text) {
     console.log("ERROR! specify what to edit");
    }
    else if (text.substring(0, 5)==='edit '){
-    editlast();
+    Tasks.pop();
+    editlast(text.replace("add ", "").substring(0,4));
+    console.log
    }
   
   else{
@@ -92,16 +99,15 @@ function list(){
 }
 function add(text){
   text=text.replace("\n","")
-  text=text.trim(" ")
+  text=text.trim()
+  
   Tasks.push(text);
   list();
 }
 
 function editlast(text){
-  text=text.replace("\n","")
-  text=text.trim(" ")
-  Tasks.push(text);
-  list();
+ removelast():
+ 
 }
 
 function removelast(){
@@ -112,16 +118,20 @@ function removelast(){
 function removeNumber(text){
   // Tasks.splice(text.substring(7)-1,1);
   // console.log("done");
-  if (text.substring(7)-1 > Tasks.length){
-    console.log("add a valid task number")
+if(isNaN(text.substring(7)-1)){
+  console.log("ERROR! ADD a valid task number")
+}
+//the work of the above line is to make sure that the user only enters a number after remove, so (remove h) for example, will not work, instead will show an error!
+ else if (text.substring(7)-1 > Tasks.length){
+    console.log("ERROR! ADD a valid task number")
   }
   else if (text.substring(7)-1< 0){
-    console.log("add a valid task number")
+    console.log("ERROR! ADD a valid task number")
   }
   //I LOVED THAT =D
   else{
     Tasks.splice(text.substring(7)-1,1);
-  console.log("done");
+  console.log("OKAY!! REMOVED");
   }
 }
 
@@ -170,7 +180,7 @@ function quit(){
 // This function lists for the user all the commands available 
 function givehelp(){
   console.log('possible commands are :\n"hello" or any command line that starts with "hello " for greetings \n"quit" or "exit" for quitting the app \n"help" to help you get the list of available commands')
-  console.log('"list" to see the tasks list \n"add" to add more tasks \n"remove" to delete the last task \n"remove n" to remove the nth task for example remove 3, removes the 3rd task ')
+  console.log('"list" to see the tasks list \n"add (task)" to add more tasks \n"remove" to delete the last task \n"remove n" to remove the nth task for example remove 3, removes the 3rd task ')
 
 }
 // The following line starts the application
