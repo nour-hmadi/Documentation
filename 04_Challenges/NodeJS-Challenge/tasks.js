@@ -66,8 +66,19 @@ function onDataReceived(text) {
    removelast();
   }
   else if (text.substring(0, 7)==='remove '){
-    removenumber(text);
+    removeNumber(text);
    }
+   //adding more stuffs because why not?
+   else if (text.substring(0, 10)==='done with '){
+    removeNumber(text);
+   }
+   else if (text==='edit\n'){
+    console.log("ERROR! specify what to edit");
+   }
+   else if (text.substring(0, 5)==='edit '){
+    editlast();
+   }
+  
   else{
     unknownCommand(text);
   }
@@ -86,15 +97,21 @@ function add(text){
   list();
 }
 
+function editlast(text){
+  text=text.replace("\n","")
+  text=text.trim(" ")
+  Tasks.push(text);
+  list();
+}
+
 function removelast(){
   Tasks.pop();
   list();
 }
 
-function removenumber(text){
-  Tasks.splice(item.substring(8)-1,1); 
- console.log("This task was removed");
- list();
+function removeNumber(text){
+  Tasks.splice(text.substring(7)-1,1);
+   console.log("done");
 }
 
 
