@@ -110,8 +110,19 @@ function removelast(){
 }
 
 function removeNumber(text){
-  Tasks.splice(text.substring(7)-1,1);
-   console.log("done");
+  // Tasks.splice(text.substring(7)-1,1);
+  // console.log("done");
+  if (text.substring(7)-1 > Tasks.length){
+    console.log("add a valid task number")
+  }
+  else if (text.substring(7)-1< 0){
+    console.log("add a valid task number")
+  }
+  //I LOVED THAT =D
+  else{
+    Tasks.splice(text.substring(7)-1,1);
+  console.log("done");
+  }
 }
 
 
