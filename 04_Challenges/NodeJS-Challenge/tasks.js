@@ -65,26 +65,27 @@ function onDataReceived(text) {
   }
   else if (text.substring(0, 4) === "add "){
     add(text.replace("add ", "").substring());
-
   }
   else if (text==='remove\n'){
-   removelast();
+    console.log("LAST TASK REMOVED!") 
   }
   else if (text.substring(0, 7)==='remove '){
     removeNumber(text);
-   }
+  }
    //adding more stuffs because why not?
    else if (text.substring(0, 10)==='done with '){
     removeNumber(text);
-   }
+  }
    else if (text==='edit\n'){
     console.log("ERROR! specify what to edit");
-   }
+  }
+   else if (text.trim(" ")==='edit'){
+    console.log("ERROR! Specify a task to edit");
+  }
    else if (text.substring(0, 5)==='edit '){
-    Tasks.pop();
-    editlast(text.replace("add ", "").substring(0,4));
-    console.log
-   }
+     editfnct(text.replace("edit ", "").substring());
+   
+  }
   
   else{
     unknownCommand(text);
@@ -105,28 +106,70 @@ function add(text){
   list();
 }
 
-function editlast(text){
- removelast():
- 
-}
+// function edit(text){
+//   text=text.trim("");
+// bati5a=text.substring(6)-2
+//   if(isNaN(bati5a)){
+//   Tasks.pop();
+//   add(text);
+//   console.log("LAST ITEM EDITED")
+//   }
+//   else if (bati5a> Tasks.length){
+//     console.log("ERROR! task number is not found")
+//   }
+//   else if (bati5a< 0){
+//     console.log("ERROR! add a positive number")
+//   }
+// else{ 
+  
+  
+//   console.log("ERROP UNSPECIFIED")}}
 
-function removelast(){
-  Tasks.pop();
-  list();
-}
+//  function editfnct(text){
+//   text=text.trim();
+//   numb=text.substring(0,1).trim();
+//   salad=text.substring(0,1);
+ 
+//   console.log(salad);
+//   console.log(numb);
+//   if(isNaN(salad)){
+//     Tasks.splice(Tasks.length-2,1,numb);
+//     console.log("YOUR LAST IS EDITED");
+//     list();
+//   }
+//   else {
+//     Tasks.splice(salad,1,numb.substring(1).trim());
+//     console.log("DONE!!");
+//     list();
+//   }
+  
+//   }
+
+
 
 function removeNumber(text){
+  text=text.trim(" ")
+  if (text==='remove'){
+    
+  Tasks.pop();
+  list();
+  console.log("LAST TASK REMOVED!") 
+  }
+
+
+
+
   // Tasks.splice(text.substring(7)-1,1);
   // console.log("done");
-if(isNaN(text.substring(7)-1)){
-  console.log("ERROR! ADD a valid task number")
+else if(isNaN(text.substring(7)-1)){
+  console.log("ERROR! ADD a valid task NUMBER, don't use texts")
 }
 //the work of the above line is to make sure that the user only enters a number after remove, so (remove h) for example, will not work, instead will show an error!
  else if (text.substring(7)-1 > Tasks.length){
     console.log("ERROR! ADD a valid task number")
   }
-  else if (text.substring(7)-1< 0){
-    console.log("ERROR! ADD a valid task number")
+  else if (text.substring(7)-1 < 0){
+    console.log("ERROR! ADD a positive task number")
   }
   //I LOVED THAT =D
   else{
@@ -134,14 +177,11 @@ if(isNaN(text.substring(7)-1)){
   console.log("OKAY!! REMOVED");
   }
 }
-
-
 /**
  * Says hello
  *
  * @returns {void}
  */
-
 function hello(text){
   text=text.replace("\n","")
   text=text.trim(" ")
@@ -162,10 +202,6 @@ function hello(text){
 function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
-
-
-
-
 
 /**
  * Exits the application
